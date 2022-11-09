@@ -1,13 +1,8 @@
 package FileExceptionDemo;
 
-import RecursionPractice.Factorials.NegativeNumberException;
-
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
-
-import static java.lang.Integer.reverse;
 
 public class ReadingHamletBackwards {
     public static void main(String[] args) {
@@ -17,7 +12,7 @@ public class ReadingHamletBackwards {
                 //ArrayList<String> lines = new ArrayList<String>();
                 while (sc.hasNextLine()) {
                     //lines.add(sc.nextLine());
-                    reverse(0);
+                    reverse("file");
                     String data = sc.nextLine();
                     System.out.println(data);
                 }
@@ -31,15 +26,24 @@ public class ReadingHamletBackwards {
             System.out.println("error " + e);
         }
     }
-    public int rev(int n) throws FileNotFoundException {
-        if(n < 0){
-            throw new FileNotFoundException(" ");
+
+    public static String reverse(String file) throws FileNotFoundException {
+        if(file.equals("true")){
+            return reverse(file);
         }
-        else if(n == 0){
-            return 1;
+        else if(file.equals(0)){
+            throw new FileNotFoundException();
         }
-        else return n - rev(n-1);
-    }
+        return "";
     }
 
-
+//    public int rev(int n, File file) throws FileNotFoundException {
+//        if(n > 0){
+//            return n - rev(n-1);
+//        }
+//        else if(n <= 0){
+//            throw new FileNotFoundException(" ");
+//        }
+//        return n;
+//    }
+    }
